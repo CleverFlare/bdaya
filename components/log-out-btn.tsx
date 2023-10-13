@@ -1,14 +1,15 @@
+import SignOutIcon from "@/icons/signout-icon";
 import { Button } from "@nextui-org/react";
-import React from "react";
 
 function LogOut() {
   return (
     <Button
-      className="w-full rounded self-end text-lg"
+      className="w-full rounded-xl p-6 sm:p-4 justify-start self-end text-md"
       color="danger"
       variant="flat"
+      startContent={<SignOutIcon />}
     >
-      Log Out
+      Sign Out
     </Button>
   );
 }
