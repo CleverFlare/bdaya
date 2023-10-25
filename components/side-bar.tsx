@@ -24,8 +24,10 @@ function SideBar() {
   const [isOpen, setIsOpen] = useState(matches);
   return (
     <div
-      className={`h-screen fixed flex justify-end items-center flex-col gap-y-3 z-20 sm:relative ${
-        isOpen ? "backdrop-blur-sm backdrop-contrast-75" : ""
+      className={`sm:h-screen fixed flex justify-end items-center flex-col gap-y-3 z-20 sm:relative ${
+        isOpen
+          ? "backdrop-blur-sm backdrop-contrast-75 h-screen bottom-0"
+          : "h-fit bottom-0"
       }`}
       onClick={() => {
         if (isOpen) {
